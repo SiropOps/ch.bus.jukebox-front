@@ -1,6 +1,5 @@
 version: "3.3"
 
-
 networks:
   default:
     external:
@@ -12,8 +11,8 @@ services:
     restart: always
     container_name: jukebox-front
     labels:
-      - "traefik.backend=jukebox-front"
-      - "traefik.port=80"
-      - "traefik.frontend.rule=Host:siroz.ovh"
+      - "traefik.enable=true"
+      - "traefik.http.routers.jukebox.rule=Host(`siroz.ovh`)"
+      - "traefik.http.routers.jukebox.entrypoints=web"
+      - "traefik.http.services.jukebox.loadbalancer.server.port=80"
       - "traefik.docker.network=reverse_proxy_admin"
-
