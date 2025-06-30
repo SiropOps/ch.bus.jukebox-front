@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:3335'
+  apiUrl: 'http://siroz.ovh'
 };
