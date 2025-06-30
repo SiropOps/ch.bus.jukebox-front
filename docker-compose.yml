@@ -1,0 +1,19 @@
+version: "3.3"
+
+
+networks:
+  default:
+    external:
+      name: reverse_proxy_admin
+
+services:
+  jukebox-front:
+    image: registry.siroz.ovh/jukebox-front:latest
+    restart: always
+    container_name: jukebox-front
+    labels:
+      - "traefik.backend=jukebox-front"
+      - "traefik.port=80"
+      - "traefik.frontend.rule=Host:siroz.ovh"
+      - "traefik.docker.network=reverse_proxy_admin"
+
