@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  apiUrl: 'http://siroz.ovh'
+  apiUrl: 'https://40.pain-pain.altidoma.ch'
 };
