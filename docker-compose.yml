@@ -21,7 +21,7 @@ services:
       - "traefik.http.routers.jukebox.rule=Host(`40.pain-pain.altidoma.ch`)"
       - "traefik.http.routers.jukebox.entrypoints=websecure"
       - "traefik.http.routers.jukebox.tls=true"
-      - "traefik.http.routers.jukebox.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.jukebox.tls.certresolver=le"
       # Service
       - "traefik.http.services.jukebox.loadbalancer.server.port=80"
       # Middleware final sur HTTPS
